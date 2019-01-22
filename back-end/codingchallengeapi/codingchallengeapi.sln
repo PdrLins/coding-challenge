@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28306.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codingchallengeapi", "codingchallengeapi\codingchallengeapi.csproj", "{239F00E8-8916-4258-A87D-F0A66393C2CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{239F00E8-8916-4258-A87D-F0A66393C2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239F00E8-8916-4258-A87D-F0A66393C2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239F00E8-8916-4258-A87D-F0A66393C2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239F00E8-8916-4258-A87D-F0A66393C2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA318398-A02D-431C-A9F5-39432292AF6C}
+	EndGlobalSection
+EndGlobal
