@@ -13,7 +13,18 @@ export class ShowroomComponent {
   constructor(private http: HttpApiService) {
 
   }
-  changeData(data:any[]){
+  changeData(data: any[]) {
+    let group = this.groupBy(data, 'vehicle');
     this.salesData = data;
+  }
+  
+  private groupBy(collection: any[], property: string) {
+    var groupByName = {};
+
+    collection.forEach(function (a) {
+      groupByName[a[property]] = groupByName[a[property]] || [];
+      groupByName[a[property]].push(a);
+    });
+    return groupByName;
   }
 }

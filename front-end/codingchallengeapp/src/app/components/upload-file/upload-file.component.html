@@ -1,18 +1,20 @@
-<h1>File Upload</h1>
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+<h3>File Upload</h3>
+<div id="uploadcompoment">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+    </div>
+    <div class="custom-file">
+      <input type="file" #file class="custom-file-input" id="inputGroupFile01" accept=".csv" (change)="upload(file.files)"
+        aria-describedby="inputGroupFileAddon01">
+      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+    </div>
+    <button class="btn btn-outline-success" *ngIf="progress == 100 && autoLoad" (click)=load()> Load File</button>
   </div>
-  <div class="custom-file">
-    <input type="file" #file class="custom-file-input" id="inputGroupFile01" accept=".csv" (change)="upload(file.files)"
-      aria-describedby="inputGroupFileAddon01">
-    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-  </div>
-  <button class="btn btn-outline-success" *ngIf="progress == 100 && autoLoad" (click)=load()> Load File</button>
+  <span class="messege" *ngIf="progress > 0 && progress < 100">
+    {{progress}}%
+  </span>
+  <span class="messege" *ngIf="message">
+    {{message}}
+  </span>
 </div>
-<span style="font-weight:bold;color:green;" *ngIf="progress > 0 && progress < 100">
-  {{progress}}%
-</span>
-<span style="font-weight: bold; color:green" *ngIf="message">
-  {{message}}
-</span>

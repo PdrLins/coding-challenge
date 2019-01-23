@@ -8,3 +8,4 @@ C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\net
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.AssemblyInfo.cs
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.dll
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.pdb
+C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.csprojAssemblyReference.cache
