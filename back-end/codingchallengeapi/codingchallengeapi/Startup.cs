@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using codingchallengeapi.Business.Interfaces;
+using codingchallengeapi.Business.Services;
+using codingchallengeapi.Data.Models;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace codingchallengeapi
 {
@@ -14,13 +18,18 @@ namespace codingchallengeapi
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            var appSettings = new AppSettings();
+            new ConfigureFromConfigurationOptions<AppSettings>(Configuration.GetSection("Settings")).Configure(appSettings);
+
+            services.AddSingleton(appSettings);
+            services.AddCors();
             services.AddMvc();
+            services.AddScoped<IFileService,FileService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -28,7 +37,20 @@ namespace codingchallengeapi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+
+            app.UseCors(cors => 
+                            cors.AllowAnyOrigin()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader()
+                                .AllowCredentials()
+                                );
+
+
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default_route", "api/{controller}/{action}/{id?}", new { controller = "Values", action = "Get" });
+            });
         }
     }
 }
