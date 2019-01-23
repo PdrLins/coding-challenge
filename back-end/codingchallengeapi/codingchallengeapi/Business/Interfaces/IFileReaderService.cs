@@ -7,8 +7,6 @@ namespace codingchallengeapi.Business.Interfaces
 {
     public interface IFileService
     {
-        RequestResult<IList<VehicleSalesData>> CsvReader(string fileName);
-        RequestResult<bool> UploadFile(IFormCollection form);
-        void LoadFile();
+        RequestResult<IList<VehicleSalesData>> ReadVehicleSaleDataCsv(IFormCollection form);
     }
 }

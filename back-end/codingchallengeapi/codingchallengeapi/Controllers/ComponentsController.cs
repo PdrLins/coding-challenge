@@ -18,7 +18,7 @@ namespace codingchallengeapi.Controllers
         [HttpPost, DisableRequestSizeLimit]
         public ActionResult UploadFile()
         {
-            var result = _IfileService.UploadFile(Request.Form);
+            var result = _IfileService.ReadVehicleSaleDataCsv(Request.Form);
             return Json(result);
         }
 
@@ -28,8 +28,7 @@ namespace codingchallengeapi.Controllers
             if (string.IsNullOrWhiteSpace(input.FileName))
                 return Json(new RequestResult<bool>() {Data = false, IsSuccess = false, Message = "File Name was not informed"});
 
-            var result = _IfileService.CsvReader(input.FileName);
-            return Json(result);
+            return Json( new { });
 
         }
     }

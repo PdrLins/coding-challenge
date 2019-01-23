@@ -19,9 +19,11 @@ export class UploadFileComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   upload(files: any[]) {
+    this.dataValueChange.emit([]);
     if (files.length == 0)
       return;
 
@@ -39,17 +41,16 @@ export class UploadFileComponent implements OnInit {
       }
       else if (ev.type === HttpEventType.Response) {
         this.message = ev.body.message.toString();
+        this.message = "Loading..."
+        setTimeout(()=>{
+          this.dataValueChange.emit(ev.body.data)
+          this.message = ""
+        },500)
       }
     });
   }
 
   load(fileName: string) {
-    fileName = this.fileName;
-    this.message = "Loading...";
-    this.uploadFileService.load(fileName).then(e => {
-      console.log(e.data);
-      this.message = "";
-      this.dataValueChange.emit(e.data);
-    })
+
   }
 }

@@ -28,6 +28,7 @@ namespace codingchallengeapi
             services.AddCors();
             services.AddMvc();
             services.AddScoped<IFileService,FileService>();
+            services.AddScoped<ICSVRuleBuilder, CSVRuleBuilderService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
