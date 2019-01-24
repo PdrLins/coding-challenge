@@ -1,7 +1,6 @@
-﻿using codingchallengeapi.Business.Interfaces;
+﻿using codingchallengeapi.Business.Builder;
 using codingchallengeapi.Data.Models;
 using codingchallengeapi.Utils;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -11,20 +10,11 @@ namespace codingchallengeapi.Business.Services
 {
     public class FileService : IFileService
     {
-        private IHostingEnvironment _hostEnviroment;
-        private readonly ICSVRuleBuilder _csvRuleBuilder;
-        private AppSettings _appSettings;
-
-
-        public FileService(ICSVRuleBuilder csvRuleBuilder, AppSettings appSettings, IHostingEnvironment hostingEnvironment)
+        public FileService()
         {
-            _hostEnviroment = hostingEnvironment;
-            _csvRuleBuilder = csvRuleBuilder;
-            _appSettings = appSettings;
         }
-        
 
-        public RequestResult<IList<VehicleSalesData>> ReadVehicleSaleDataCsv(IFormCollection form)
+        public RequestResult<IList<VehicleSalesData>> ImportVehicleSaleDataFromCsv(IFormCollection form)
         {
             var vehicleSalesDataList = new List<VehicleSalesData>();
             try
@@ -33,14 +23,13 @@ namespace codingchallengeapi.Business.Services
 
                 if (file.Length > 0)
                 {
-
                     using (var stream = file.OpenReadStream())
                     {
-                        vehicleSalesDataList.AddRange(_csvRuleBuilder.VehicleSalesDataRule(stream));
+                        var builder = new VehicleSalesCsvBuilder();
+                        var items = builder.Build(stream);
+                        vehicleSalesDataList.AddRange(items);
                     }
-
                 }
-
                 return new RequestResult<IList<VehicleSalesData>>()
                 {
                     IsSuccess = true,

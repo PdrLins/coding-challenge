@@ -1,11 +1,11 @@
+C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.csprojAssemblyReference.cache
+C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.csproj.CoreCompileInputs.cache
+C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.AssemblyInfoInputs.cache
+C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.AssemblyInfo.cs
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\bin\Debug\netcoreapp2.1\codingchallengeapi.deps.json
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\bin\Debug\netcoreapp2.1\codingchallengeapi.runtimeconfig.json
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\bin\Debug\netcoreapp2.1\codingchallengeapi.runtimeconfig.dev.json
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\bin\Debug\netcoreapp2.1\codingchallengeapi.dll
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\bin\Debug\netcoreapp2.1\codingchallengeapi.pdb
-C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.csproj.CoreCompileInputs.cache
-C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.AssemblyInfoInputs.cache
-C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.AssemblyInfo.cs
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.dll
 C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.pdb
-C:\coding-challenge\back-end\codingchallengeapi\codingchallengeapi\obj\Debug\netcoreapp2.1\codingchallengeapi.csprojAssemblyReference.cache

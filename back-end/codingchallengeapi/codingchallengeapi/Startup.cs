@@ -1,5 +1,4 @@
-﻿using codingchallengeapi.Business.Interfaces;
-using codingchallengeapi.Business.Services;
+﻿using codingchallengeapi.Business.Services;
 using codingchallengeapi.Data.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,8 +26,8 @@ namespace codingchallengeapi
             services.AddSingleton(appSettings);
             services.AddCors();
             services.AddMvc();
-            services.AddScoped<IFileService,FileService>();
-            services.AddScoped<ICSVRuleBuilder, CSVRuleBuilderService>();
+            services.AddScoped<IFileService, FileService>();
+            
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -39,7 +38,7 @@ namespace codingchallengeapi
             }
 
 
-            app.UseCors(cors => 
+            app.UseCors(cors =>
                             cors.AllowAnyOrigin()
                                 .AllowAnyMethod()
                                 .AllowAnyHeader()
@@ -50,7 +49,7 @@ namespace codingchallengeapi
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute("default_route", "api/{controller}/{action}/{id?}", new { controller = "Values", action = "Get" });
+                routes.MapRoute("default_route", "api/{controller}/{action}/{id?}");
             });
         }
     }

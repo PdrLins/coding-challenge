@@ -10,6 +10,7 @@ export class ShowroomComponent {
   title = 'codingchallengeapp';
   public salesData: any[] = [];
   public autoLoad: boolean = true;
+  public group
   constructor(private http: HttpApiService) {
 
   }

@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Business\Inputs\" />
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\FilesRepository\" />
   </ItemGroup>

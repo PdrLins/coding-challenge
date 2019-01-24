@@ -9,12 +9,12 @@ export class UploadFileService {
   }
 
   upload(formData: FormData) {
-    return this.http.request('components/UploadFile', formData, {
+    return this.http.request('VehicleData/ImportSalesFromCsvFile', formData, {
       reportProgress: true
     });
   }
 
   load(fileName: string) {
-    return this.http.post("components/LoadFile", { fileName: fileName });
+   
   }
 }
