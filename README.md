@@ -1,27 +1,26 @@
 # Coding Challenge
 
-One Paragraph of project description goes here
+This is a simple application which combines Angular 4+, .Net core 2.1 and For application logic, only .NET and C#. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them
+*You must have node installed on your machine
+* You must install npm or yarn
+* You must have angular 6+ installed on your machine
 
+To run this project, follow the below instructions. (If you have yarn installed on your machine, replace npm with yarn)
+
+Clone this github repository
 ```
-Give examples
+1.Give examples
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
+https://github.com/PdrLins/coding-challenge.git
 ```
 
 And repeat
