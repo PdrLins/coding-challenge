@@ -44,7 +44,7 @@ namespace codingchallengeapi.Business.Services
                 {
                     IsSuccess = false,
                     Data = vehicleSalesDataList,
-                    Message = $"Upload Failed:{ e.Message}"
+                    Message = $"Upload Failed: { e.Message}"
                 };
             }
         }

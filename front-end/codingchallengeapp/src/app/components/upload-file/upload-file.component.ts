@@ -10,9 +10,10 @@ import { UploadFileService } from './service/upload-file.service';
 
 export class UploadFileComponent implements OnInit {
   @Output() dataValueChange = new EventEmitter();
-  @Input() autoLoad:false;
+  @Input() autoLoad: false;
   public message: string;
   public progress: number;
+  public success:boolean;
   public fileName: string;
 
   constructor(private uploadFileService: UploadFileService) {
@@ -28,12 +29,11 @@ export class UploadFileComponent implements OnInit {
       return;
 
     const formData = new FormData();
-    for (let file of files)
-    {
+    for (let file of files) {
       formData.append(file.name, file)
       this.fileName = file.name;
     }
-      
+
 
     this.uploadFileService.upload(formData).subscribe((ev: any) => {
       if (ev.type === HttpEventType.UploadProgress) {
@@ -41,11 +41,14 @@ export class UploadFileComponent implements OnInit {
       }
       else if (ev.type === HttpEventType.Response) {
         this.message = ev.body.message.toString();
-        this.message = "Loading..."
-        setTimeout(()=>{
-          this.dataValueChange.emit(ev.body.data)
-          this.message = ""
-        },500)
+        this.success = ev.body.isSuccess;
+        if (ev.body.isSuccess) {
+          this.message = "Loading..."
+          setTimeout(() => {
+            this.dataValueChange.emit(ev.body)
+            this.message = ""
+          }, 500)
+        }
       }
     });
   }

@@ -14,7 +14,7 @@
   <span class="messege" *ngIf="progress > 0 && progress < 100">
     {{progress}}%
   </span>
-  <span class="messege" *ngIf="message">
+  <span [ngClass]="(this.success) ? 'messege' : 'messegeError'" *ngIf="message">
     {{message}}
   </span>
 </div>

@@ -1,5 +1,6 @@
 ﻿using codingchallengeapi.Business.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace codingchallengeapi.Controllers
 {
@@ -16,8 +17,12 @@ namespace codingchallengeapi.Controllers
         public ActionResult ImportSalesFromCsvFile()
         {
             var result = _fileService.ImportVehicleSaleDataFromCsv(Request.Form);
-            return Json(result);
+                var mostSold = result.Data.GroupBy(g => g.Vehicle)
+                                      .Select(s => new { s.Key, Qty = s.Count() }).OrderByDescending(o => o.Qty).FirstOrDefault();
+                return Json(new { result.IsSuccess, result.Message, result.Data, MostSold = mostSold });
+
+          
         }
     }
-        
+
 }

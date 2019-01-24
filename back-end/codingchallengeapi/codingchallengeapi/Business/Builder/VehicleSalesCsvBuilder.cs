@@ -13,23 +13,25 @@ namespace codingchallengeapi.Business.Builder
         public IList<VehicleSalesData> Build(Stream stream)
         {
             var vehicleSalesDataList = new List<VehicleSalesData>();
-
             using (StreamReader sr = new StreamReader(stream))
             {
                 int line = 0;
 
                 while (!sr.EndOfStream)
                 {
+                    Regex regexParse = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+
                     var strLine = sr.ReadLine();
+                    var fields = regexParse.Split(strLine).Select(s =>
+                    {
+                        return s = s.TrimStart(' ', '"').TrimEnd('"');
+                    }).ToArray();
+                    if (line == 0)
+                    {
+                        VehicleSaleScheme(fields);
+                    }
                     if (line != 0)
                     {
-                        Regex regexParse = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
-                        var fields = regexParse.Split(strLine).Select(s =>
-                        {
-                            return s = s.TrimStart(' ', '"').TrimEnd('"');
-                        }).ToArray();
-
-
                         var vehicleSalesData = new VehicleSalesData()
                         {
                             DealNumber = Convert.ToInt32(fields[0]),
@@ -49,10 +51,20 @@ namespace codingchallengeapi.Business.Builder
             return vehicleSalesDataList;
         }
 
-        private void VehicleSaleScheme()
+        private void VehicleSaleScheme(string[] columnsFile)
         {
-            //desenhar aqui o check para saber se o layout que entrou é correto
+            var schemeColumn = new List<string>() { "DealNumber", "CustomerName", "DealershipName", "Vehicle", "Price", "Date" };
+
+            if (columnsFile.Length != schemeColumn.Count())
+            {
+                throw new ArgumentException("Different scheme accepted, ");
+            }
+
+            if (columnsFile.Any(a=> !schemeColumn.Contains(a)))
+            {
+                throw new ArgumentException("Different scheme accepted");
+            }
         }
     }
-    
+
 }

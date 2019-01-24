@@ -10,22 +10,15 @@ export class ShowroomComponent {
   title = 'codingchallengeapp';
   public salesData: any[] = [];
   public autoLoad: boolean = true;
-  public group
+  public mostSold: any = null;
   constructor(private http: HttpApiService) {
 
   }
-  changeData(data: any[]) {
-    let group = this.groupBy(data, 'vehicle');
-    this.salesData = data;
-  }
-  
-  private groupBy(collection: any[], property: string) {
-    var groupByName = {};
+  changeData(data: any) {
+    if (data.hasOwnProperty('data'))
+      this.salesData = data.data;
 
-    collection.forEach(function (a) {
-      groupByName[a[property]] = groupByName[a[property]] || [];
-      groupByName[a[property]].push(a);
-    });
-    return groupByName;
+    if (data.hasOwnProperty('mostSold'))
+      this.mostSold = data.mostSold;
   }
 }

@@ -13,8 +13,4 @@ export class UploadFileService {
       reportProgress: true
     });
   }
-
-  load(fileName: string) {
-   
-  }
 }

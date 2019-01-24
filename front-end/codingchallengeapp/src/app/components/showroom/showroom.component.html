@@ -1,6 +1,6 @@
 <div>
   <p class="lead">
-    Choose you file .CSV from your computer to upload
+    Choose your file .CSV from your computer to upload
     <br>
   </p>
   <p class="lead">You can also <a routerLink="" class="alert-link">back!</a> to the begin.</p>
@@ -8,6 +8,10 @@
 <div>
   <div>
     <upload-file (dataValueChange)="changeData($event)"></upload-file>
+  </div>
+  <div *ngIf="salesData.length > 0" style="padding: 1.5%;">
+    <span>Vehicle was most sold: </span><span style="font-weight: bold">{{mostSold.key}}</span><span>, Quantity: </span> <span
+      style="font-weight: bold"> {{mostSold.qty}} </span>
   </div>
   <div class="table-wrapper-scroll-y">
     <!--Table-->
@@ -26,7 +30,7 @@
       <!--Table head-->
 
       <!--Table body-->
-      <tbody >
+      <tbody>
         <tr *ngFor="let item of salesData">
           <td>{{item.dealNumber}}</td>
           <td>{{item.customerName}}</td>
