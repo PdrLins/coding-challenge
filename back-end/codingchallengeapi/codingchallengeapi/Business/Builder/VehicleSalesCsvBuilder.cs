@@ -51,7 +51,7 @@ namespace codingchallengeapi.Business.Builder
             return vehicleSalesDataList;
         }
 
-        private void VehicleSaleScheme(string[] columnsFile)
+        public void VehicleSaleScheme(string[] columnsFile)
         {
             var schemeColumn = new List<string>() { "DealNumber", "CustomerName", "DealershipName", "Vehicle", "Price", "Date" };
 

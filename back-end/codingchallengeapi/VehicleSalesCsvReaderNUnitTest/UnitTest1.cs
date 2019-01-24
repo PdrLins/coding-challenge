@@ -1,4 +1,8 @@
+using codingchallengeapi.Business.Builder;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Tests
 {
@@ -9,10 +13,6 @@ namespace Tests
         {
         }
 
-        [Test]
-        public void TestImportFile()
-        {
-            Assert.Pass();
-        }
+        
     }
 }

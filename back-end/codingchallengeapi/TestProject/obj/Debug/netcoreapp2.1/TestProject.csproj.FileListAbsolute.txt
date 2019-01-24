@@ -1,0 +1,17 @@
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\TestProject.deps.json
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\TestProject.runtimeconfig.json
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\TestProject.runtimeconfig.dev.json
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\TestProject.dll
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\TestProject.pdb
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\codingchallengeapi.dll
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\bin\Debug\netcoreapp2.1\codingchallengeapi.pdb
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\obj\Debug\netcoreapp2.1\TestProject.csprojAssemblyReference.cache
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\obj\Debug\netcoreapp2.1\TestProject.csproj.CoreCompileInputs.cache
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\obj\Debug\netcoreapp2.1\TestProject.AssemblyInfoInputs.cache
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\obj\Debug\netcoreapp2.1\TestProject.AssemblyInfo.cs
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\obj\Debug\netcoreapp2.1\TestProject.csproj.CopyComplete
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\obj\Debug\netcoreapp2.1\TestProject.dll
+C:\coding-challenge\back-end\codingchallengeapi\TestProject\obj\Debug\netcoreapp2.1\TestProject.pdb
