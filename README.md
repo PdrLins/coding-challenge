@@ -6,7 +6,7 @@ This is a simple application which combines Angular 4+, .Net core 2.1 and For ap
 
 ### Prerequisites
 
-*You must have node installed on your machine
+* You must have node installed on your machine
 * You must install npm or yarn
 * You must have angular 6+ installed on your machine
 
